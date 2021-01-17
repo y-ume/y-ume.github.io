@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="2021/01/16/test/"/>
-      <url>2021/01/16/test/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight c++"><figcaption><span>implementation of A + B</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x , y;</span><br><span class="line">  <span class="built_in">std</span>::<span class="keyword">int</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">  <span class="keyword">int</span> z = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; x + y &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文章布局</span></span><br><span class="line"><span class="attr">article:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">body:</span></span><br><span class="line">    <span class="string">...</span></span><br><span class="line">    <span class="attr">meta_library:</span></span><br><span class="line">      <span class="attr">author:</span></span><br><span class="line">        <span class="attr">avatar:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">请设置文章作者</span></span><br><span class="line">        <span class="attr">url:</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>练习-12</title>
       <link href="2018/01/27/%E7%BB%83%E4%B9%A0-12/"/>
       <url>2018/01/27/%E7%BB%83%E4%B9%A0-12/</url>
