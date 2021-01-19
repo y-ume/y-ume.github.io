@@ -323,13 +323,12 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/paint/">paint</a><span class="sep"></span><a class="category-link" href="/categories/paint/imitating/">imitating</a>
-    </a>
-  </div>
-
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/y-ume/assets@main/favicon/マジョカップ.jpg">
+    <p>y-ume</p>
+  </a>
+</div>
 
           
         
@@ -365,6 +364,20 @@
       <p>1 min</p>
     </a>
   </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2018/01/01/%E4%B8%B4%E6%91%B9%E6%A1%8C%E9%9D%A2-%E7%BA%BF%E7%A8%BF/#comments">
+    <i class="fa fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2018/01/01/%E4%B8%B4%E6%91%B9%E6%A1%8C%E9%9D%A2-%E7%BA%BF%E7%A8%BF/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
 
 
           
@@ -421,8 +434,12 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/photoshop/" rel="nofollow"><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i><p>photoshop</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/paint/">paint</a><span class="sep"></span><a class="category-link" href="/categories/paint/imitating/">imitating</a>
+    </a>
+  </div>
 
 
         
@@ -803,7 +820,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/valine.min.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -880,7 +897,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/app.min.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -892,7 +909,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/search/hexo.min.js',setSearchService);
+		loadScript('/js/search/hexo.js',setSearchService);
 	
 })
 

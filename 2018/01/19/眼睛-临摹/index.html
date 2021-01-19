@@ -321,13 +321,12 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/paint/">paint</a><span class="sep"></span><a class="category-link" href="/categories/paint/imitating/">imitating</a>
-    </a>
-  </div>
-
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/y-ume/assets@main/favicon/マジョカップ.jpg">
+    <p>y-ume</p>
+  </a>
+</div>
 
           
         
@@ -360,6 +359,20 @@
       <p>1 min</p>
     </a>
   </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2018/01/19/%E7%9C%BC%E7%9D%9B-%E4%B8%B4%E6%91%B9/#comments">
+    <i class="fa fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2018/01/19/%E7%9C%BC%E7%9D%9B-%E4%B8%B4%E6%91%B9/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
 
 
           
@@ -402,6 +415,13 @@
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/paint/">paint</a><span class="sep"></span><a class="category-link" href="/categories/paint/imitating/">imitating</a>
+    </a>
+  </div>
+
 
         
       
@@ -415,23 +435,27 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2018/01/21/%E7%BB%83%E4%B9%A0-8/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>练习-8</p>
-          <p class='content'>板子压感调整到最坚硬之后。
-
-
-
+        <a class='prev' href='/2018/01/22/mind-blowing/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>mind-blowing</p>
+          <p class='content'>星屑 舞台灯光 盾牌
+横雨路灯黑伞
 </p>
         </a>
       
       
-        <a class='next' href='/2018/01/17/%E7%BB%83%E4%B9%A0-Day7/'>
-          <p class='title'>练习-Day7<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>发现了之前颜色变淡的原因。竟然是按到上排数字键的时候动了透明度。画曲线的时候试着下别的顺序。中轴的时候对称着画。其它角度每个内圈转着画。发现会有点晕。
+        <a class='next' href='/2018/01/15/%E6%8D%A2%E7%9A%AE%E8%82%A4/'>
+          <p class='title'>换皮肤<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>搬了两天终于从WordPress到hexo了清点下家具
+
+hexo
+asset_img
+post_asset_folder
 
 
-
-</p>
+hexo-theme-next
+https
+cloudflare
+...</p>
         </a>
       
     </div>
@@ -773,7 +797,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/valine.min.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -850,7 +874,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/app.min.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -862,7 +886,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/search/hexo.min.js',setSearchService);
+		loadScript('/js/search/hexo.js',setSearchService);
 	
 })
 

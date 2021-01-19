@@ -323,13 +323,12 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/tools/">tools</a><span class="sep"></span><a class="category-link" href="/categories/tools/hexo/">hexo</a>
-    </a>
-  </div>
-
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/y-ume/assets@main/favicon/マジョカップ.jpg">
+    <p>y-ume</p>
+  </a>
+</div>
 
           
         
@@ -365,6 +364,20 @@
       <p>1 min</p>
     </a>
   </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2018/01/15/%E6%8D%A2%E7%9A%AE%E8%82%A4/#comments">
+    <i class="fa fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2018/01/15/%E6%8D%A2%E7%9A%AE%E8%82%A4/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
 
 
           
@@ -439,8 +452,12 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/tools/">tools</a><span class="sep"></span><a class="category-link" href="/categories/tools/hexo/">hexo</a>
+    </a>
+  </div>
 
 
         
@@ -455,21 +472,19 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2018/01/15/%E7%BB%83%E4%B9%A0-Day-6/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>练习-Day-6</p>
-          <p class='content'>康复性练习
-
-
-
-</p>
+        <a class='prev' href='/2018/01/19/%E7%9C%BC%E7%9D%9B-%E4%B8%B4%E6%91%B9/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>眼睛-临摹</p>
+          <p class='content'>
+直接把原版颜色从棕色变成了黑色。毫无色感啊。不知道应该用什么笔刷。目前使用默认的第六个笔，然后调了调板子的硬度。眼白部分留多之后眼睛感觉就直接变掉了。画线的定位不太行，直接一个图层画整体感要提...</p>
         </a>
       
       
-        <a class='next' href='/2018/01/12/%E7%BB%83%E4%B9%A0-Day5/'>
-          <p class='title'>练习 Day 5<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>于昨天相比。直线好像更细了。曲线的圈往内缩了。
+        <a class='next' href='/2018/01/06/%E5%8D%83%E5%8F%8D%E7%94%B0%E7%88%B1%E7%91%A0-%E4%B8%B4%E6%91%B9/'>
+          <p class='title'>千反田爱瑠-临摹<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+tips
 
-
+眼睛研究了好久怎么画，最后发现可以一层层涂上去
 
 </p>
         </a>
@@ -813,7 +828,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/valine.min.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -890,7 +905,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/app.min.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -902,7 +917,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/search/hexo.min.js',setSearchService);
+		loadScript('/js/search/hexo.js',setSearchService);
 	
 })
 
