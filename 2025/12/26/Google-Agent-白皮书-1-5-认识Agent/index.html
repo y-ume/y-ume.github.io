@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Category: temp - y-ume</title>
+  <title>Google Agent 白皮书 1/5 - 认识Agent - y-ume</title>
+  
+    <meta name="keywords" content="Agent">
   
 
   
@@ -65,8 +65,6 @@
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -279,7 +277,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/y-ume/assets@main/img/船.jpg"></div>
           
@@ -308,119 +306,261 @@
       <div class='body-wrapper' id="pjax-container">
         
 
+<div class='l_main no_sidebar'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
 
-<div class='l_main'>
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Google Agent 白皮书 1/5 - 认识Agent
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/y-ume/assets@main/favicon/マジョカップ.jpg">
+    <p>y-ume</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Agent/" rel="nofollow"><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i><p>Agent</p></a></div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fa fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Dec 26, 2025</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：4.6k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：15分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/#comments">
+    <i class="fa fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>在Google Gemini 3发布前一周Google发了一系列关于Agent的白皮书，总共5本：</p>
+<ol>
+<li>Introduction to Agents</li>
+<li>Agent Tools &amp; Interoperability with MCP</li>
+<li>Agent Quality</li>
+<li>Context Engineering: Sessions, Memory</li>
+<li>Prototype to Production</li>
+</ol>
+<p>Gemini 3的出现加速了AI竞争结局的收敛，其光芒掩盖了这几本不受关注的白皮书，或者说白皮书原先也不会有什么光芒。<br>有幸通过微信公众号捕捉到了这几篇白皮书的信息。阅读了第一篇《Introduction to Agents》和其他几篇的内容定位后，准备做个人解读。一方面因为当今信息流已充斥着各种AI工作流形成的产物，希望<strong>通过跳跃式且略有拗口的人的风格来介绍这几篇白皮书</strong>；另一方面希望<strong>通过文字输出来提升个人对Agent的理解</strong>。愿这些内容为你带来帮助，无论是当下还是未来。<br>以下是Gemini 3 Flash对《为什么Google在发布Gemini 3前1周发布了5篇Agent的白皮书？》的回答。(Gemini can make mistakes, so double-check it)</p>
+<img src="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E7%99%BD%E7%9A%AE%E4%B9%A6%E5%8F%91%E5%B8%83%E5%8E%9F%E7%94%B1.png" class="lazyload" data-srcset="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E7%99%BD%E7%9A%AE%E4%B9%A6%E5%8F%91%E5%B8%83%E5%8E%9F%E7%94%B1.png" srcset="data:image/png;base64,666" class=" lazyload">
+<p>文中的<em>斜体</em>代表非原文但容易被理解为原文的内容。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>文中最上方是用超大引用块突出的文字：</p>
+<blockquote>
+<p>Agents are the natural evolution of Language Models, made useful in software.</p>
+</blockquote>
+<p>自然演进这个用词很有趣，让我联想到微软CEO Satya提到的「好工具来自人类认知的自然形式」。</p>
+<h2 id="从预测性AI到自主Agent"><a href="#从预测性AI到自主Agent" class="headerlink" title="从预测性AI到自主Agent"></a>从预测性AI到自主Agent</h2><p>提到范式转变（paradigm shift）。<em>GPT前AI聚焦点问题的预测，GPT后AI聚焦用一个模型实现相同输入形态的预测（语言、视觉、听觉），再往后开始用多模态模型完成不同形式输入和输出的预测。</em> 而我们正在见证一种范式转变，从仅仅能预测或创建内容的人工智能，转向一类能够<strong>自主解决问题和执行任务</strong>的新型软件。</p>
+<h2 id="AI-Agents介绍"><a href="#AI-Agents介绍" class="headerlink" title="AI Agents介绍"></a>AI Agents介绍</h2><p>AI Agent被定义为了四个部分：</p>
+<ol>
+<li>模型（大脑）: 通过核心语言模型或基础模型处理信息、评估选择和做出决策。</li>
+</ol>
+<blockquote>
+<p>这边很有趣的一个点是先用的是core language model，而在后面提到模型类型的时候才提到了multimodal（多模态）。Gemini 3刚出来我的直觉是「这次Google的优势在于多模型技术」。而这边强调了language的核心，更偏向于人脑的理性思考媒介，其他模态需要更好地服务于语言模态。</p>
+<ol start="2">
+<li>工具（双手）：通过工具将智能体的推理与外部世界连接起来，使其能执行文本生成之外的操作。</li>
+<li>编排层（神经系统）：管理智能体操作循环的主导流程，负责规划、记忆和推理策略执行。</li>
+<li>部署（身体和腿）：将智能体和交互页面部署到可靠的服务器和用户终端。<br>  这边将智能体比作了人，但有点勉强。人的工具也可以包括身体和腿；编排层和模型合在一起更像是人的大脑，神经系统更像是模型调用工具的方式；部署更像是基因和社会。</li>
+</ol>
+</blockquote>
+<p><em>大白话讲如何构建AI Agent：</em></p>
+<ol>
+<li>挑选一个合适的语言模型（一个思考能力能满足任务的模型）</li>
+<li>挑选一组合适且可以调用的工具（完成任务的必要工具）</li>
+<li>编排流程，循环进行规划、记忆和推理（循环控制语言模型完成子任务）</li>
+<li>调试Agent直到正常运行（监控过程和日志，优化以上三点）</li>
+</ol>
+<p>当Agent被精确配置，拥有清晰的指令、可靠的工具、上下文的记忆、不错的用户界面、规划与解决问题的能力以及通用的世界知识时，它就超越了单纯的「工作流自动化」的概念，而是作为一个团队中一个高效、适应性极强且能力卓越的新成员。<br><em>这里新成员的定调颇有代指工具人的意味。确实目前已经看到可预计完成的任务已经可以交给智能体来全盘处理。</em></p>
+<p>上下文可能包括：系统指令、用户输入、会话历史、长期记忆、来自权威来源的基础知识、可用工具以及已调用工具的结果。</p>
+<h3 id="代理问题解决过程"><a href="#代理问题解决过程" class="headerlink" title="代理问题解决过程"></a>代理问题解决过程</h3><p>我们将AI Agent<strong>定义</strong>为一个完整的、以目标为导向的应用程序，它整合了推理模型、可执行工具和一个主导的编排层。简而言之，就是「与工具形成循环以实现目标的语言模型」。<br><em>按照MBTI来看，AI Agent像是ENTJ：以目标为导向、整合资源、全局指挥。</em></p>
+<img src="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E6%AD%A5%E9%AA%A4.png" class="lazyload" data-srcset="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E6%AD%A5%E9%AA%A4.png" srcset="data:image/png;base64,666" class=" lazyload">
+
+<p>上图是Agent的五个步骤，包括：</p>
+<ol>
+<li>获取任务（容易理解）</li>
+<li>扫描场景（程序初始化，上班初始化）</li>
+<li>深入思考（核心步骤，思考如何制定完成目标的分解步骤）</li>
+<li>采取行动（根据步骤调用接口、运行代码、查找数据）</li>
+<li>观察与迭代（通过动作结果的观察更新记忆回到第3步）<br><em>这里的3-4-5的流程和强化学习的结构类似，「决策-执行-环境改变」循环</em></li>
+</ol>
+<p>文中举了一个例子（重点描述了3-4-5的循环）：</p>
+<ol>
+<li>用户问道：“我的12345号订单在哪里？”</li>
+<li>深入思考<ol>
+<li>“用户想知道配送状态。要给出完整的答案，我需要一个多步骤计划：</li>
+<li>确认：我必须首先在我们的内部数据库中找到该订单，以确认其存在并获取其详细信息。</li>
+<li>追踪：根据这些细节，我需要提取运输承运商的追踪号码。然后，我会查询外部承运商的API以获取实时状态。</li>
+<li>报告：最后，我必须将收集到的信息整合为一个清晰、有用的回复给用户。</li>
+</ol>
+</li>
+<li>采取行动「确认」，调用「find_order(“12345”)」，观察到「追踪号码“ZYX987”」</li>
+<li>思考「已完成第一步，进入第二步」，调用「get_shipping_status（”ZYX987”）」，观察到「正在配送中」</li>
+<li>思考「已完成第二步，进行第三步」，生成报告「您的订单#12345状态为‘正在配送中’！」。<br><em>最后的一次步骤可以认为是调用了语言模型来生成报告，观察到报告后回到思考步骤并确认已完成目标</em></li>
+</ol>
+<h2 id="Agent分级"><a href="#Agent分级" class="headerlink" title="Agent分级"></a>Agent分级</h2><p>到了喜闻乐见的「L几」定义章节了。每一个级别都是在上个级别的基础上做了能力补充。定义还是很容易理解的，有一种「从初代GPT3走向MOSS」的感觉。</p>
+<img src="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E5%88%86%E7%BA%A7.png" class="lazyload" data-srcset="/2025/12/26/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-1-5-%E8%AE%A4%E8%AF%86Agent/Agent%E5%88%86%E7%BA%A7.png" srcset="data:image/png;base64,666" class=" lazyload">
+
+<h3 id="L0：核心推理系统"><a href="#L0：核心推理系统" class="headerlink" title="L0：核心推理系统"></a>L0：核心推理系统</h3><p>即语言模型本身，仅基于庞大的预训练知识进行响应，不借助任何工具、记忆，也不与实时环境进行交互。<br><em>GPT3刚出的时候位于L0级别，语言模型有训练截止日期，无法获知训练完成后的任何真实数据</em></p>
+<h3 id="L1：互联问题解决者"><a href="#L1：互联问题解决者" class="headerlink" title="L1：互联问题解决者"></a>L1：互联问题解决者</h3><p>在L0的基础上，引擎<strong>可以通过连接并利用外部工具</strong>，不再局限于静态的、预训练的知识。这个级别可以完整的完成Agent的五个步骤。<br><em>为什么从L0而不是L1定义，一方面L0的出现是基石，另一方面L1才开始是完整的Agent</em><br><em>当前具备联网搜索功能的AI可以认为位于L1级别，无论是通过RAG还是实时API实现</em></p>
+<h3 id="L2：策略问题解决者"><a href="#L2：策略问题解决者" class="headerlink" title="L2：策略问题解决者"></a>L2：策略问题解决者</h3><p>在L1的基础上，L2可以从执行简单任务转变为<strong>策略性地规划和解决复杂的问题</strong>。<br><em>用简单到复杂的定义来区分L1和L2有点模糊。我当前用3-4-5是否循环来区分L1和L2。L2强调了循环的重要性，即如何更好地利用记忆（当前主流是上下文）。</em><br><em>当前的自动化编程软件可以认为位于L2级别</em></p>
+<h3 id="L3：协作式多智能体系统"><a href="#L3：协作式多智能体系统" class="headerlink" title="L3：协作式多智能体系统"></a>L3：协作式多智能体系统</h3><p>在L2的基础上，范式进一步发生转变。这个节点下智能体开始<strong>以团队形式协同工作</strong>，可以类比一个项目下不同成员的分工。<em>这个级别可以认为是L2并行的版本</em><br><em>当前部分自动化编程软件已具备这个能力，但费用高（GPU消耗线性增加）</em></p>
+<h3 id="L4：自我进化系统"><a href="#L4：自我进化系统" class="headerlink" title="L4：自我进化系统"></a>L4：自我进化系统</h3><p>最高级L4代表Agent可以识别自身能力的不足，并<strong>动态创建工具</strong>甚至新智能体来弥补这些不足。<br><em>当前还没有看到公开的L4 Agent，但目前来看写代码和编译的动作都属于L3下可以解决的。L4需要解决如何识别不足和形成工具设计规格。</em><br><em>去查了一下流浪地球2的台词：这是550C，目前最先进的自感知、自适应、自组织、可重塑编译计算核心，在于硬件连接以后可以实时生成低层操作系统，自行组织发动机建设。不夸张地说，如果量子计算机+L4，我们就会步入科幻。</em></p>
+<h2 id="Agent核心架构：模型、工具与编排"><a href="#Agent核心架构：模型、工具与编排" class="headerlink" title="Agent核心架构：模型、工具与编排"></a>Agent核心架构：模型、工具与编排</h2><p>以下内容就是开始教你搭建Agent了，详细的攻略可以去看看原白皮书，我们很快过一遍~</p>
+<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>选型需要考虑智能体的认知能力、运营成本和速度，即质量、速度和价格。<br>可以考虑用混合模型来做，不同的模型负责不同的语言任务，达到最优的速度和成本。<br>语音和图像先转为文本，再通过语言模型进行推理。<br>模型的帕累托前沿还在提升，需要从架构层考虑快速替换模型。</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>一个强大的工具接口包含三部分循环：定义工具的功能、调用工具以及观察结果。<br><em>工具的三循环对应3-4-5循环</em><br>白皮书《Agent Tools &amp; Interoperability with Model Context Protocol (MCP)》会专门介绍工具。</p>
+<h4 id="检索信息"><a href="#检索信息" class="headerlink" title="检索信息"></a>检索信息</h4><p>检索增强生成（RAG）就类似从图书馆借阅书籍。<br>对于结构化数据，可通过自然语言转SQL的方式查找准确的信息。</p>
+<h4 id="执行操作"><a href="#执行操作" class="headerlink" title="执行操作"></a>执行操作</h4><p>可以将现有的API和代码函数包装成工具。<br>需要控制在安全的沙箱环境中。<br>可以支持人机交互，即中断工作流或介入流程。</p>
+<h4 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h4><p>像函数调用一样使用工具，需要清晰的指令、安全的连接以及编排。<br><em>和编程中基类逻辑一致，每个工具都可以抽象为一个类</em></p>
+<h3 id="编排层"><a href="#编排层" class="headerlink" title="编排层"></a>编排层</h3><p>考虑如何设计3-4-5循环</p>
+<h4 id="核心设计选择"><a href="#核心设计选择" class="headerlink" title="核心设计选择"></a>核心设计选择</h4><p>确定Agent的自主程度，需要确保循环可以确定性的、可预测地完成任务。<br>考虑实现方法是否采用代码构建。<br><em>代码框架Google推了自己的工具包，无代码平台搜了一下看到了阿里的AgentRun。阿里不愧是我最看好的国内AI公司（哈哈哈）</em></p>
+<h4 id="结合领域知识和角色设计指令"><a href="#结合领域知识和角色设计指令" class="headerlink" title="结合领域知识和角色设计指令"></a>结合领域知识和角色设计指令</h4><p>通过提示词让智能体有人设、有限制、有期望输出。<br><em>Agent的课题就是如何用自然语言来编程</em></p>
+<h4 id="用上下文增强"><a href="#用上下文增强" class="headerlink" title="用上下文增强"></a>用上下文增强</h4><p>短期记忆是Agent活跃的暂存区，用于保存对话的历史并跟踪循环的「动作-观察」对。<br>长期记忆通过RAG系统实现。<br>白皮书《Context Engineering: Sessions &amp; Memory》会专门介绍智能体记忆。</p>
+<h4 id="多智能体系统与设计模式"><a href="#多智能体系统与设计模式" class="headerlink" title="多智能体系统与设计模式"></a>多智能体系统与设计模式</h4><p>将一个大型任务分割为离散的子任务，每个子任务分配各一个专门的、专业的AI Agent处理。<br>对于非线性任务，会出现一个管理者的角色，类比项目经理分配任务和资源。<br>对于线性任务，顺序模式即可。<br>迭代优化任务会出现一个评估Agent和一个提示词Agent，来迭代结果。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>Google推荐了Vertex AI Agent Engine。<br>以前能部署的基础设施依然可以使用。</p>
+<h3 id="Agent运维"><a href="#Agent运维" class="headerlink" title="Agent运维"></a>Agent运维</h3><p>测试Agent运行符合预期，不能用传统的确定性结果测试方法，因为Agent的结果有不确定性。<br>因此我们用语言模型来评估质量，引出了Agent Ops（智能体运维）的概念。<br>白皮书《Agent Quality》会介绍如何评估智能体质量。</p>
+<h4 id="衡量重要的事物：像A-B实验一样衡量成功"><a href="#衡量重要的事物：像A-B实验一样衡量成功" class="headerlink" title="衡量重要的事物：像A&#x2F;B实验一样衡量成功"></a>衡量重要的事物：像A&#x2F;B实验一样衡量成功</h4><p>用KPI的方式定义Agent的价值，分解为目标完成率、用户满意度评分、任务延迟、交互运营成本等。</p>
+<h4 id="质量通过语言模型评估"><a href="#质量通过语言模型评估" class="headerlink" title="质量通过语言模型评估"></a>质量通过语言模型评估</h4><p>基于语言模型通过一组优质提示数据集进行自动化评估，提供一种一致的指令衡量标准。<br>创建数据集非常繁琐，需要从Agent生产和开发交互中抽取样本，并涵盖正负样本，且评估需要有专家审核。</p>
+<h4 id="指标驱动开发"><a href="#指标驱动开发" class="headerlink" title="指标驱动开发"></a>指标驱动开发</h4><p>构建好评估用例，可以开始用榜单PK不同版本的Agent能力了。</p>
+<h4 id="使用OpenTelemetry跟踪和调试"><a href="#使用OpenTelemetry跟踪和调试" class="headerlink" title="使用OpenTelemetry跟踪和调试"></a>使用OpenTelemetry跟踪和调试</h4><p>一个开源的标准化框架，可采集、处理和导出遥测数据（跟踪、指标和日志），以提升软件的可观测性。</p>
+<h4 id="珍视人类的反馈"><a href="#珍视人类的反馈" class="headerlink" title="珍视人类的反馈"></a>珍视人类的反馈</h4><p>反馈即数据，数据即优化。</p>
+<h3 id="Agent的互操作性"><a href="#Agent的互操作性" class="headerlink" title="Agent的互操作性"></a>Agent的互操作性</h3><p>该如何让Agent与人和其他Agent连接。</p>
+<h4 id="Agent和人"><a href="#Agent和人" class="headerlink" title="Agent和人"></a>Agent和人</h4><p>最常见的就是用户界面。<br>人的互动不局限在屏幕和键盘，更先进的Agent开始进入实时模式。人可以通过摄像头和麦克风与Agent交互。</p>
+<h4 id="Agent和Agent"><a href="#Agent和Agent" class="headerlink" title="Agent和Agent"></a>Agent和Agent</h4><p>Agent间必须像Agent和人一样建立连接，核心问题包括「如何发现其他智能体并了解它们做什么」以及「如何进行通信」。Agent2Agent （A2A）协议是为解决这个问题而设计的开放标准。这个协议是L3 Agent的关键。</p>
+<h4 id="Agent和钱"><a href="#Agent和钱" class="headerlink" title="Agent和钱"></a>Agent和钱</h4><p>如果允许Agent进行「购买」，就会涉及到授权、真实性和问责等问题。如果开启真正的智能体经济，我们需要新的标准，让Agent进行安全可靠地交易。<br>Agent Payments Protocol （AP2）是一种开发协议，旨在成为智能体商业的权威语言；x402是一种开放的互联网支付协议，它使用标准的HTTP 402”需要付款“状态码，无需复杂的账号或订阅。<br><em>想到最近的字节智能手机以及量化交易</em></p>
+<h3 id="使单Agent安全：信任的平衡"><a href="#使单Agent安全：信任的平衡" class="headerlink" title="使单Agent安全：信任的平衡"></a>使单Agent安全：信任的平衡</h3><p>当你创建了一个AI Agent，你会面对实用性和安全性的权衡。<br>想让他有用，你需要赋予它权力，但每赋予它一份权力都会带来相应的风险。<br>需要从外层进行防护，第一层是在外围定义约束，即每一步会对外界带来影响的接口都需要有相关的控制。第二层是用人工智能来保障其安全，即检查Agent的计划是否有风险。</p>
+<h4 id="Agent身份"><a href="#Agent身份" class="headerlink" title="Agent身份"></a>Agent身份</h4><p>需要授予Agent身份，使其可以通过访问验证并管理Agent的权限。提到一个叫做SPIFFE的标准。</p>
+<h4 id="限制访问策略"><a href="#限制访问策略" class="headerlink" title="限制访问策略"></a>限制访问策略</h4><p>按照Agent的角色授权。</p>
+<h4 id="使ADK-Agent安全"><a href="#使ADK-Agent安全" class="headerlink" title="使ADK Agent安全"></a>使ADK Agent安全</h4><p>Agent Development Kit<br>需要在Agent运行中防止出现操作越界、提示词注入、越狱尝试、敏感数据泄露等问题。介绍了一种安全框架，可以让你构建出既强大又可信的单一智能体。</p>
+<h3 id="单Agent扩展到企业级智能体集群"><a href="#单Agent扩展到企业级智能体集群" class="headerlink" title="单Agent扩展到企业级智能体集群"></a>单Agent扩展到企业级智能体集群</h3><p>随着系统中Agent的增加，Agent就创建了一个由交互、数据流和潜在安全漏洞组成的新的负责网络。管理这种复杂性需要一个更高阶的治理层。</p>
+<h4 id="安全和隐私"><a href="#安全和隐私" class="headerlink" title="安全和隐私"></a>安全和隐私</h4><p>恶意行为者可通过注入来劫持Agent的指令，约束不佳的Agent可能会泄露敏感数据和专有信息。<br>一个强大的平台需要提供一个纵深策略来降低这些风险。</p>
+<h4 id="Agent治理"><a href="#Agent治理" class="headerlink" title="Agent治理"></a>Agent治理</h4><p>这里用自动驾驶汽车比作Agent。我们需要交通信号灯、车牌和中央控制系统。<br><em>当今的互联网或者软件开发已经有各类管理方式，但未来需要实现高效的管理</em></p>
+<h4 id="成本和可靠性"><a href="#成本和可靠性" class="headerlink" title="成本和可靠性"></a>成本和可靠性</h4><p>最终，企业级Agent必须既可靠又有成本效益。<br><em>企业能赚钱才是关键</em></p>
+<h3 id="Agent如何进行和学习"><a href="#Agent如何进行和学习" class="headerlink" title="Agent如何进行和学习"></a>Agent如何进行和学习</h3><p>已经上线的Agent会随着时间的推移而跟不上技术的变更。手动更新大量Agent又跟不上变化，一种可扩展性的解决方案是设计能够自主学习和发展的Agent。</p>
+<h4 id="Agent如何学习和自我进化"><a href="#Agent如何学习和自我进化" class="headerlink" title="Agent如何学习和自我进化"></a>Agent如何学习和自我进化</h4><p>学习来源一方面来自于运行时人的体验（人在回路）；另一方面来自于外部信号，包括文件变更、政策变更或其他Agent的批评。<br>进化一方面是上下文增强，即优化记忆方式；另一方面是创建和优化工具；</p>
+<h3 id="模拟和Agent-Gym"><a href="#模拟和Agent-Gym" class="headerlink" title="模拟和Agent Gym"></a>模拟和Agent Gym</h3><p>是目前的前沿方向。可以在虚拟环境中来构建和运行Agent，即设计出「环境」。这个思路和世界模型相同。</p>
+<h2 id="高级Agent的案例"><a href="#高级Agent的案例" class="headerlink" title="高级Agent的案例"></a>高级Agent的案例</h2><p>介绍了Google Co-Scientist和AlphaEvolve Agent两份工作。</p>
+<h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>白皮书最后是结论部分，就不再赘述了。25年可以认为是Agent的元年，AI竞争浪潮和实际使用确实感受到了Agent的落地。拆解白皮书来看，人工智能正在以人的思维方式进化着。但前沿大佬认为AI又进入到了科研的阶段。以我浅显的认知，当前的AI还缺少「想象力」，即如何快速推演变化的能力，因为想象力如同预测，但人的预测是直觉的，当前AI的预测是数据驱动的。也许可以在架构或者计算能力上看到突破。希望下个五年可以看到新的AI范式，让我们见证更多的不可思议。</p>
+<p>写于2025-12-23</p>
+
+  
   
     
+    <div class='footer'>
       
-  <section class="post-list">
+      
+      
+      
+    </div>
+  
+  
     
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2025-12-26T07:34:50+08:00">
+  <a class='notlink'>
+    <i class="fa fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Dec 26, 2025</p>
+  </a>
+</div>
+
+        
       
         
           
+
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2025/12/09/%E9%87%8D%E8%BF%9E%E6%8E%A5/">
-        重连接
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2025-12-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/temp/">temp</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/12/09/%E9%87%8D%E8%BF%9E%E6%8E%A5/'>
-            Read More
-          </a>
-        </div>
       
     </div>
+  </div>
+
+
+  
   
 
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <div class='avatar'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/y-ume/assets@main/favicon/マジョカップ.jpg'/>
-        </div>
-      
-    
-    
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/%E4%B8%B4%E6%97%B6/" style="font-size: 14px; color: #999">临时</a>
-    </div>
-  </section>
-
-
-  
-
 
 </aside>
+
 
 
         
@@ -430,8 +570,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Google Agent 白皮书 1/5 - 认识Agent";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
