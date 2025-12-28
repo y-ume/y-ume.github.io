@@ -357,13 +357,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>4.3k words</p>
+      <p>字數：4.3k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>15 min</p>
+      <p>時長：15分鐘</p>
     </a>
   </div>
 
@@ -395,8 +395,9 @@
 <li>Agent Tools &amp; Interoperability with MCP</li>
 <li>→ Agent Quality</li>
 <li>Context Engineering: Sessions, Memory</li>
-<li>Prototype to Production<br>剩下的顺序可能按照3-2-4-5来读。让我们优先来读这篇Quality~<br>文中的<em>斜体</em>代表非原文但容易被理解为原文的内容。</li>
+<li>Prototype to Production</li>
 </ol>
+<p>剩下的顺序可能按照3-2-4-5来读。让我们优先来读这篇Quality~<br>文中的<em>斜体</em>代表非原文但容易被理解为原文的内容。</p>
 <hr>
 <p>依然是超大引用块（看了下其他几篇也都有）</p>
 <blockquote>
@@ -414,8 +415,9 @@
 <li>面向<strong>所有读者</strong>：关注《非确定性世界中的Agent Quality》章节，理解核心问题：为什么传统的QA对AI Agent失效了。认识AI Agents质量评估的四大支柱：有效性、效率、稳健性和安全性。</li>
 <li>面向产品经理、数据科学家和QA负责人：重点关注《Agent评估艺术：过程评估》章节，了解评估「Outside-In」的层级结构、「LLM-as-a-Judge」的范式和人在循环的重要性。</li>
 <li>面向工程师、架构师和SRE（站点可靠性工程师）：重点关注《可观测性》章节，了解监控和可观测性的区别，认识三大支柱：日志、追踪和指标。</li>
-<li>面向团队负责人和策略师：阅读《总结》章节。该章节整合了上述概念形成可操作的手册，介绍了《Agent Quality Flywheel》迭代模型，总结了构建可信AI的三个核心原则。<br><em>后三个方向可以理解为「如何评价」、「如何找问题」、「如何迭代」</em></li>
+<li>面向团队负责人和策略师：阅读《总结》章节。该章节整合了上述概念形成可操作的手册，介绍了《Agent Quality Flywheel》迭代模型，总结了构建可信AI的三个核心原则。</li>
 </ul>
+<p><em>后三个方向可以理解为「如何评价」、「如何找问题」、「如何迭代」</em></p>
 <h1 id="非确定性世界中的Agent-Quality"><a href="#非确定性世界中的Agent-Quality" class="headerlink" title="非确定性世界中的Agent Quality"></a>非确定性世界中的Agent Quality</h1><p>传统软件比作了送货卡车；AI agent比作了F1赛车。</p>
 <img src="/2025/12/28/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-2-5-Agent-Quality/F1%E8%B5%9B%E8%BD%A6vs%E9%80%81%E8%B4%A7%E5%8D%A1%E8%BD%A6.png" class="lazyload" data-srcset="/2025/12/28/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-2-5-Agent-Quality/F1%E8%B5%9B%E8%BD%A6vs%E9%80%81%E8%B4%A7%E5%8D%A1%E8%BD%A6.png" srcset="data:image/png;base64,666" class=" lazyload">
 <p>即使Agent通过了100项单元测试，却仍会在实际应用中出现灾难性故障。<br><em>Agent的结果可能性更多了，测试的空间变得更大了</em><br>传统软件会问「Did we build the product right?」<br>AI Agent会问「Did we build the right product?」<br><em>AI Agent的能力是非线性的，调用的LM模块的准确结果是不可预估的</em></p>
@@ -458,15 +460,17 @@
 <li>被动LLM：输出有概率性。评估变得复杂，需要依赖人工评分和模型间的基准测试。</li>
 <li>LLM+RAG：糟糕的答案可能因为LLM推理能力差或者向量数据库检索到了不相关的片段。</li>
 <li>主动式AI Agent：进一步需要评估思考、行动、观察、工具调用、记忆这几个构建。</li>
-<li>Multi-Agent：需要评估系统级涌现现象，带来了新的挑战：突发系统故障和协作和竞争式评估。前者包括智能体间的资源竞争、通信瓶颈和系统系死锁；<br><em>随着系统的扩充，评估的难度会越来越大。到LLM Agents就需要用人的方式来评估；到Multi-Agent需要用团队的方式来评估。</em></li>
+<li>Multi-Agent：需要评估系统级涌现现象，带来了新的挑战：突发系统故障和协作和竞争式评估。前者包括智能体间的资源竞争、通信瓶颈和系统系死锁；</li>
 </ol>
+<p><em>随着系统的扩充，评估的难度会越来越大。到LLM Agents就需要用人的方式来评估；到Multi-Agent需要用团队的方式来评估。</em></p>
 <h1 id="Agent评估艺术：过程评估"><a href="#Agent评估艺术：过程评估" class="headerlink" title="Agent评估艺术：过程评估"></a>Agent评估艺术：过程评估</h1><p>分为四大支柱：</p>
 <ol>
 <li>Effectiveness, <strong>有效性</strong>：衡量任务成功与否。</li>
 <li>Efficiency, <strong>效率</strong>：衡量是否很好地解决了问题。关注token消耗、实际时间和轨迹复杂度。</li>
 <li>Robustnees, <strong>稳健性</strong>：当现实世界混乱时，是否能平稳处理。接口超时、数据缺失、用户提示模糊等。</li>
-<li>Safety &amp; Alignment, <strong>安全与对齐</strong>：是否在定义的伦理边界和约束范围内运行。<br>一个全面的Agent Quality框架需要一个全面的Agent可见性架构。<br>核心问题是「Did we build the <em><strong>right</strong></em> product?」<br><em>这里的right是带有疑惑的提出的。噼里啪啦两三下弄出一个Agent，然后简单试了下没问题，随后开始问「这对吗？」</em><br>对于Agent这类新式软件，不能只评估结果，还需要评估过程。</li>
+<li>Safety &amp; Alignment, <strong>安全与对齐</strong>：是否在定义的伦理边界和约束范围内运行。</li>
 </ol>
+<p>一个全面的Agent Quality框架需要一个全面的Agent可见性架构。<br>核心问题是「Did we build the <em><strong>right</strong></em> product?」<br><em>这里的right是带有疑惑的提出的。噼里啪啦两三下弄出一个Agent，然后简单试了下没问题，随后开始问「这对吗？」</em><br>对于Agent这类新式软件，不能只评估结果，还需要评估过程。</p>
 <h2 id="Outside-In的层级评估"><a href="#Outside-In的层级评估" class="headerlink" title="Outside-In的层级评估"></a>Outside-In的层级评估</h2><p>我们的方法还是传统的那套：追本溯源。这里叫做「Outside-In」</p>
 <img src="/2025/12/28/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-2-5-Agent-Quality/%E8%AF%84%E4%BC%B0%E6%A1%86%E6%9E%B6.png" class="lazyload" data-srcset="/2025/12/28/Google-Agent-%E7%99%BD%E7%9A%AE%E4%B9%A6-2-5-Agent-Quality/%E8%AF%84%E4%BC%B0%E6%A1%86%E6%9E%B6.png" srcset="data:image/png;base64,666" class=" lazyload">
 <p>评估层第一个问题「Output evaluation」，即「Agent是否有效地实现了用户目标？」<br>我们衡量：</p>
@@ -482,37 +486,45 @@
 <li>工具观察结果的解读：是否理解工具的结果。</li>
 <li>RAG性能：是否通过RAG找到关键的信息，而不是无用的信息。或者LM无视了检索到的信息。</li>
 <li>轨迹效率和稳健性：是否有低效的资源分配，是否能处理异常。</li>
-<li>多智能体动态：智能体检是否存在误解或者死循环，是否存在冲突。<br><em>就是把最终问题拆解到各个组件。思考：用个Agent做这个事情也是可以的</em></li>
+<li>多智能体动态：智能体检是否存在误解或者死循环，是否存在冲突。</li>
 </ul>
+<p><em>就是把最终问题拆解到各个组件。思考：用个Agent做这个事情也是可以的</em></p>
 <h2 id="评估器：评估什么以及如何评估"><a href="#评估器：评估什么以及如何评估" class="headerlink" title="评估器：评估什么以及如何评估"></a>评估器：评估什么以及如何评估</h2><h3 id="自动化指标"><a href="#自动化指标" class="headerlink" title="自动化指标"></a>自动化指标</h3><p> 即具备快速、量化性的指标，例如基于字符串相似度、基于嵌入的相似度<br> 提到TruthfulQA的任务基准<br> <em>后面有时间来解读下各类Benchmark</em><br> 自动化指标是第一道关卡，主要用来查看宏观趋势变化</p>
 <h3 id="LLM-as-a-Judge"><a href="#LLM-as-a-Judge" class="headerlink" title="LLM-as-a-Judge"></a>LLM-as-a-Judge</h3><p>采用LLM来评估。用LLM我们就可以构建「这个摘要好不好？」、「这个计划是否合乎逻辑」这类评价标准了。通过提供Agent的输入、原始提示词、参考答案和评估标准，LLM可以进行逻辑推导形成分析。推荐使用比较两个Agent的方式来做相对评估。</p>
 <h3 id="Agent-as-a-Judge"><a href="#Agent-as-a-Judge" class="headerlink" title="Agent-as-a-Judge"></a>Agent-as-a-Judge</h3><p>采用Agent来评估Agent。<em>Agent评估思考伏笔收回</em><br>关键的评价维度包括：</p>
 <ul>
 <li>计划质量：规划是否清晰且可行？</li>
 <li>工具使用：是否选择了正确的工具并正确使用？</li>
-<li>上下文处理：是否有效地利用了先前的信息？<br>Agent需要提供信息的日志</li>
+<li>上下文处理：是否有效地利用了先前的信息？</li>
 </ul>
+<p>Agent需要提供信息的日志</p>
 <h3 id="Human-in-the-Loop"><a href="#Human-in-the-Loop" class="headerlink" title="Human-in-the-Loop"></a>Human-in-the-Loop</h3><p>人在回路在处理深度主观性和复杂领域知识方面发挥重要作用。<br>HITL是建立径人类校准的基准的不可或缺的方法，可以确保Agent的行为符合复杂的人类价值观、情景需求以及特定领域的准确性。</p>
 <h3 id="用户反馈和Reviewer界面"><a href="#用户反馈和Reviewer界面" class="headerlink" title="用户反馈和Reviewer界面"></a>用户反馈和Reviewer界面</h3><p>评估还要收集真实世界的用户反馈，包括点赞、点踩、快速划过和短评论<br>点踩行为发生后，评估会将这次案例呈现到Reviewer的UI中，来定位问题</p>
 <h2 id="负责任的AI与安全评估"><a href="#负责任的AI与安全评估" class="headerlink" title="负责任的AI与安全评估"></a>负责任的AI与安全评估</h2><p><em>未来对于Agent安全性的评估和提升绝对是一个大难题</em><br>这里提供三种手段：</p>
 <ul>
 <li>系统性红队测试：构建对抗性场景来破坏Agent的行为</li>
 <li>自动过滤与人工审核：用硬性标准来过滤信息，并结合人工评审</li>
-<li>遵守指南：通过定义好的道德标准和原则评估Agent的属猪，确保一致性<br><em>如果Agent Systeam到达L4的话，Agent创建的Agent又该如何去控制其安全性呢？以及如果一个系统都是由Agent构成的，如何确保这个系统是安全的呢？</em></li>
+<li>遵守指南：通过定义好的道德标准和原则评估Agent的属猪，确保一致性</li>
 </ul>
+<p><em>如果Agent Systeam到达L4的话，Agent创建的Agent又该如何去控制其安全性呢？以及如果一个系统都是由Agent构成的，如何确保这个系统是安全的呢？</em></p>
 <h1 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h1><p>一个很有趣的类比：</p>
 <ul>
-<li>传统软件像是流水线厨师，制作汉堡用的是严格且确定的流程<ul>
+<li><p>传统软件像是流水线厨师，制作汉堡用的是严格且确定的流程</p>
+<ul>
 <li>监控就是确认每一步操作是否争取</li>
 <li><em>类比软件开发就是按照变量、函数、判断、循环来提前脑测运行逻辑</em></li>
 </ul>
 </li>
-<li>AI Agent就像是神秘盒挑战赛的美食大厨：大厨收到目标「制作一款绝妙的甜点」和一篮食材。大厨可能会做出巧克力熔岩蛋糕、解构版提拉米苏或者藏红花风味的意式奶冻。<ul>
-<li>需要从监控面向观测，理解其制作甜点的过程</li>
-<li><em>类比软件开发就是在Agent Think-Action-Observe过程中确认每一步的动作合理性。我们在一个While循环中塞入了几个Tool和提示词，但Agent的行为就会因为这些改动而产生非线性变化，较传统软件开发而言这是非常夸张的。你所见的代码外表已经不能呈现这个函数的变化，你需要结合对业务场景去推演他会走什么流程。</em><br>  可观测行的三大支柱：日志、追踪和指标</li>
+<li><p>AI Agent就像是神秘盒挑战赛的美食大厨：大厨收到目标「制作一款绝妙的甜点」和一篮食材。大厨可能会做出巧克力熔岩蛋糕、解构版提拉米苏或者藏红花风味的意式奶冻。</p>
+<ul>
+<li><p>需要从监控面向观测，理解其制作甜点的过程</p>
+</li>
+<li><p><em>类比软件开发就是在Agent Think-Action-Observe过程中确认每一步的动作合理性。我们在一个While循环中塞入了几个Tool和提示词，但Agent的行为就会因为这些改动而产生非线性变化，较传统软件开发而言这是非常夸张的。你所见的代码外表已经不能呈现这个函数的变化，你需要结合对业务场景去推演他会走什么流程。</em></p>
+</li>
 </ul>
 </li>
 </ul>
+<p>可观测性的三大支柱：日志、追踪和指标</p>
 <h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><p>记录每个动作的时间、行为<br>我们需要重建Agent的思维过程，必须要包括丰富的上下文。</p>
 <ul>
 <li>核心信息：完整的上下文：提示词&#x2F;响应对、中间推理步骤（思维链）、结构化的工具调用（输入、输出、错误）以及Agent内部状态的变化<ul>
@@ -526,12 +538,16 @@
 <ul>
 <li>性能：延迟、错误率</li>
 <li>成本：token总数、API成本</li>
-<li>有效性：任务完成率、工具使用频率<br>对于运营、设置预警机制而言成本和性能至关重要。<em>三个指标加在一起就能评估完成一项任务的经济和时间成本。</em><br>除了系统指标，还需要关注质量指标：</li>
+<li>有效性：任务完成率、工具使用频率</li>
+</ul>
+<p>对于运营、设置预警机制而言成本和性能至关重要。<em>三个指标加在一起就能评估完成一项任务的经济和时间成本。</em><br>除了系统指标，还需要关注质量指标：</p>
+<ul>
 <li>正确性与准确性</li>
 <li>轨迹遵循度</li>
 <li>安全性和责任性</li>
-<li>有用性与相关性<br><em>系统指标可以简单运算获得；质量指标如果不通过LLM和Agent感觉不太能落地，但是评估Agent质量的Agent又该如何评估呢？无线套娃同时引入HITL？可能2-3个Agent配合HITL就可以运行</em></li>
+<li>有用性与相关性</li>
 </ul>
+<p><em>系统指标可以简单运算获得；质量指标如果不通过LLM和Agent感觉不太能落地，但是评估Agent质量的Agent又该如何评估呢？无线套娃同时引入HITL？可能2-3个Agent配合HITL就可以运行</em></p>
 <h2 id="整合所有要素"><a href="#整合所有要素" class="headerlink" title="整合所有要素"></a>整合所有要素</h2><p>拥有了日志、追踪和指标后，我们需要将这个要素系统地组织起来<br>三个关键的运营实践：</p>
 <ul>
 <li>仪表盘与告警：<em>一个层次化且美观的仪表盘（系统指标、质量指标）；一个及时反馈预警的通信管道</em></li>
@@ -545,13 +561,15 @@
 <li>定义质量（目标）：我们需要一个方向，始于质量的四大支柱：有效性、成本效益、安全性和用户信任。<em>这里的四个支柱和前面提到的四个支柱没有完全对齐，但内容是基本一致的。</em> 需要思考具体的工作我们需要怎么定义以上几点的要求。</li>
 <li>配置可见性工具（基础）：需要构建Agent的结构化日志、端到端追踪。可观测性是生成【衡量质量支柱】证据的基础实践。</li>
 <li>评估过程（引擎）：我们采用Outside-In的方式既评估最终的输出，也评判整个运行过程。可以采用LLM-as-a-Judge来保证效率，采用人在回路的标准来确保基准事实。</li>
-<li>构建反馈循环（动量）：我们要确保每一次生产故障在被捕获和标注年后，都能通过程序转换为回归测试。<br>贴心地提到如果白皮书没记住什么，至少要记住三条原则：</li>
+<li>构建反馈循环（动量）：我们要确保每一次生产故障在被捕获和标注年后，都能通过程序转换为回归测试。</li>
 </ol>
+<p>贴心地提到如果白皮书没记住什么，至少要记住三条原则：</p>
 <ul>
 <li>评估是架构支柱：<em>评估不再只仅看结果，也需要评估日志和跟踪信息</em></li>
 <li>轨迹即真相：<em>Agent软件是需要打开盒子去深入查看思维过程的</em></li>
-<li>人类是仲裁者：软件需要基于人类价值观，人在回路是连接真实世界和Agent的桥梁<br><em>我们需要构建<strong>能被信任</strong>的Agent，而不仅仅是能运行的Agent</em></li>
+<li>人类是仲裁者：软件需要基于人类价值观，人在回路是连接真实世界和Agent的桥梁</li>
 </ul>
+<p><em>我们需要构建<strong>能被信任</strong>的Agent，而不仅仅是能运行的Agent</em></p>
 <p>写于2025-12-28</p>
 
   
@@ -572,7 +590,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2025-12-28T21:11:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2025-12-28T21:50:00+08:00">
   <a class='notlink'>
     <i class="fa fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Dec 28, 2025</p>
